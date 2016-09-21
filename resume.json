@@ -47,7 +47,7 @@
       "subtype":"个人项目",
       "name": "Resume Generator",
       "link":"https://github.com/0xLLLLH/resume-generator",
-      "demo":"",
+      "demo":"http://115.28.240.133:3000/resume/",
       "descriptions":[
         "在线简历生成器，设计参考<a href='http://joyeecheung.github.io/resume/'>这份简历</a>",
         "从JSON读取数据，使用<strong>Vue.js</strong>生成页面，<strong>SCSS</strong>生成<strong>响应式</strong>样式"

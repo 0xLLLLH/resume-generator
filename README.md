@@ -1,8 +1,10 @@
-# resume-generator
+# Resume Generator
 
 > A Vue.js project that generate an online resume.
 
 Written with Webpack, SCSS, and Vue.
+
+[Demo](http://115.28.240.133:3000/resume/)
 
 ## Build Setup
 
