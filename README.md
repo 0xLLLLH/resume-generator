@@ -1,6 +1,6 @@
 # Resume Generator
 
-> A Vue.js project that generate an online resume.
+> A Vue.js project that generate an online resume.Inspired by [this repo](https://github.com/joyeecheung/resume)
 
 Written with Webpack, SCSS, and Vue.
 
