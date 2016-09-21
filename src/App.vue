@@ -30,6 +30,17 @@
                         <a :href="basicInfo.blog">{{basicInfo.blog}}</a>
                     </i>
                 </div>
+                <div class="contact" v-if="basicInfo.phone">
+                    <i class="fa fa-phone" aria-hidden="true">
+                        <a :href="basicInfo.phone">{{basicInfo.phone}}</a>
+                    </i>
+                </div>
+
+                <div class="contact" v-if="basicInfo.weibo">
+                    <i class="fa fa-weibo" aria-hidden="true">
+                        {{basicInfo.weibo}}
+                    </i>
+                </div>
             </section>
         </header>
         <article class="container resume-body">

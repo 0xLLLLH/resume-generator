@@ -2,6 +2,8 @@
 
 > A Vue.js project that generate an online resume.
 
+Written with Webpack, SCSS, and Vue.
+
 ## Build Setup
 
 ``` bash
