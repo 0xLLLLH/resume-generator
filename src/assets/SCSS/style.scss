@@ -1,0 +1,488 @@
+/**
+* Global settings and mixin
+*/
+
+$color-primary: #333;
+$color-accent-light: darkturquoise;
+$color-accent-dark: teal;
+$breakpoints: (
+        'tablet' : (min-width: 768px),
+        'laptop' : (min-width: 992px),
+        'laptop-L' : (min-width: 1200px)
+);
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media screen and #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+@mixin clear() {
+    overflow: auto;
+    zoom: 1;
+}
+
+@mixin box-shadow($shadow-style...) {
+  -webkit-box-shadow: $shadow-style;
+  -moz-box-shadow: $shadow-style;
+  box-shadow: $shadow-style;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/**
+* Global styles
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  background: #e0e0e0;
+  font-family: FontAwesome, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: $color-accent-dark;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+a:hover {
+  color: $color-accent-light !important;
+}
+
+.fa {
+  color: #fff;
+}
+
+dl, dd {
+  margin: 0;
+  padding: 0;
+  text-wrap: normal;
+  line-height: 22px;
+}
+
+dt {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+@media print {
+  .visible-print {
+    display: block;
+  }
+
+  .invisible-print {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  aside,footer {
+    display: none;
+  }
+}
+
+$progress-bar-height: 22px;
+
+.progress-bar {
+  float: right;
+  width: 75%;
+  height: $progress-bar-height;
+  @include border-radius($progress-bar-height/4);
+  background: $color-primary;
+
+  @include respond-to(tablet) {
+    width: 80%
+  }
+
+  .progress {
+    height: 100%;
+    color: #fff;
+    background: $color-accent-dark;
+    @include border-radius($progress-bar-height/4);
+    text-align: right;
+    line-height: $progress-bar-height;
+    font-weight: bold;
+    padding-right: 10px;
+  }
+}
+
+#resume {
+  width: 100%;
+  background: #fff;
+  @include box-shadow(0 0 12px rgba(0, 0, 0, .2));
+
+  @include respond-to(tablet) {
+    width: 750px;
+    margin: 10px auto;
+  }
+  @include respond-to(laptop) {
+    width: 980px;
+  }
+  @include respond-to(laptop-L) {
+    width: 1024px;
+  }
+}
+
+@media print {
+  #resume {
+    padding: 0;
+  }
+}
+.container {
+  margin: 0;
+  padding: 15px 15px;
+  min-height: 100px;
+  @include respond-to(tablet) {
+    padding: 36px 45px;
+  }
+}
+@media not print {
+  .container {
+    @include clear();
+  }
+}
+
+/**
+* Resume header
+*/
+
+.resume-header {
+  background: $color-primary;
+
+  @include clear();
+
+  .qrcode {
+    display: none;
+    margin: 0;
+    @include respond-to(laptop) {
+      display: block;
+      width: 130px;
+      height: 130px;
+      float: left;
+    }
+  }
+  @media print {
+    .qrcode {
+        display: block;
+        width: 130px;
+        height: 130px;
+        float: left;
+    }
+  }
+  .contact-block {
+    float: left;
+    margin-left: 15px;
+  }
+  .contact {
+    font-size: 1.1rem;
+    min-width: 100px;
+    min-height: 20px;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  .contact a {
+    color: #fff;
+    margin-left: 10px;
+  }
+  .title {
+    color: #fff;
+    text-align: center;
+    @include respond-to(tablet) {
+      float: right;
+    }
+  }
+  @media print {
+    .title {
+      float: right;
+    }
+  }
+  .title h1 {
+    font-size: 4.5rem;
+    margin: 5px auto;
+    text-align: center;
+    font-weight: 500;
+  }
+  .title h2 {
+    font-size: 1.7rem;
+    margin: 5px auto;
+    text-align: center;
+    font-weight: 500;
+    @include respond-to(tablet) {
+      text-align: right;
+    }
+    @media print {
+      h2 {
+        text-align: right;
+      }
+    }
+  }
+}
+
+/**
+* Resume body
+*/
+$title-icon-size: 44px;
+$subtitle-icon-size: 36px;
+$line-width: 5px;
+$dot-size: 16px;
+$title-height: 30px;
+.resume-body {
+  strong {
+    color: $color-accent-dark;
+  }
+}
+.left-part {
+  min-height: 100px;
+  @include respond-to(laptop) {
+    float: left;
+    width: 50%;
+    padding-right: 20px;
+  }
+}
+.right-part {
+  min-height: 100px;
+  @include respond-to(laptop) {
+    float: left;
+    width: 50%;
+    padding-right: 20px;
+  }
+}
+@media print {
+  .left-part {
+    float: left;
+    width: 50%;
+    padding-right: 20px;
+  }
+  .right-part {
+    float: left;
+    width: 50%;
+    padding-right: 20px;
+  }
+}
+.sec-title {
+}
+.sec-title .title-icon {
+  float: left;
+  width: $title-icon-size;
+  height: $title-icon-size;
+  background: $color-primary;
+  text-align: center;
+  line-height: $title-icon-size;
+  font-size: $title-icon-size*0.6;
+  @include border-radius(100%);
+}
+
+.sec-title .title-text {
+  margin-left: $title-icon-size + 10px;
+}
+
+.title-text-ch {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.title-text-en {
+  font-size: 0.9rem;
+  color: $color-accent-dark;
+}
+
+.sec-content {
+  min-height: 100px;
+  margin-left: $title-icon-size/2;
+}
+
+.time-line {
+  position: relative;
+  margin: -$line-width/2;
+  padding: 0;
+  min-height: 100px;
+  border-left: $line-width solid $color-primary;
+}
+
+.time-line:after {
+  display: block;
+  content: '';
+  width: $dot-size;
+  height: $dot-size;
+  background: $color-primary;
+  position: absolute;
+  left: -$line-width/2-$dot-size/2;
+  bottom: -$line-width/2-$dot-size/2;
+  @include border-radius(100%)
+}
+
+.time-line-item {
+  position: relative;
+  padding-top: 20px;
+
+  &:last-child {
+    padding-bottom: 15px;
+  }
+}
+
+.time-line-title {
+  height: $title-height;
+  line-height: $title-height;
+  @include border-radius($title-height/4);
+  padding-left: $title-icon-size/2 + 5px;
+  padding-right: 10px;
+  background: $color-primary;
+  color: #fff;
+  &:before {
+    position: absolute;
+    left: -$subtitle-icon-size/2 - $line-width/2;
+    top: $title-height/2 + $line-width/2;
+    width: $subtitle-icon-size;
+    height: $subtitle-icon-size;
+    background: $color-accent-dark;
+    line-height: $subtitle-icon-size;
+    text-align: center;
+    font-size: $subtitle-icon-size*0.55;
+    display: block;
+    content: "\f0b1";
+    color: #fff;
+    @include border-radius(100%);
+  }
+}
+
+.time-line-title .link {
+  font-size: 0.9rem;
+  float: right;
+  color: $color-primary;
+  background: #fff;
+  margin: 5px 2px;
+  padding: 0 8px;
+  height: $title-height - 10px;
+  line-height: $title-height - 10px;
+  @include border-radius(5px);
+
+  &:before {
+    display: inline-block;
+    content: "\f0c1";
+    width: 20px;
+  }
+}
+
+.time-line-content {
+  padding-left: $title-icon-size/2 + 10;
+}
+
+.education, .language, .experience, .skills {
+  margin-bottom: 25px;
+}
+.education {
+  .education-school {
+    font-size: 2rem;
+  }
+
+  .time-line-title:before {
+    content: "\f02e";
+  }
+  .education-major {
+    height: 25px;
+    &:before {
+      display: inline-block;
+      content: "\f19d";
+      width: 30px;
+    }
+  }
+
+  .education-honor {
+    &:before {
+      display: inline-block;
+      content: "\f091";
+      width: 30px;
+    }
+  }
+}
+.language {
+  .language-score {
+    padding-top: 20px;
+  }
+
+  .language-score .cert-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .language-score .score {
+    height: 30px;
+  }
+
+  .language-description {
+    line-height: 25px;
+    text-wrap: normal;
+    &:before {
+      content: "\f005";
+      display: inline-block;
+      width: 30px;
+    }
+  }
+}
+.experience {
+  .time-line-title:before {
+    content: "\f0b1";
+  }
+  .experience-position, .experience-project-name {
+    font-size: 1.2rem;
+  }
+  .experience-time {
+    float: right;
+  }
+  .experience-description {
+    &:before {
+      display: inline-block;
+      width: 30px;
+      content: "\f013";
+      margin-left: -30px;
+    }
+    padding-left: 30px;
+  }
+}
+
+.skills {
+  .time-line-title:before {
+    content: "\f12e";
+  }
+
+  .skill-name {
+    font-size: 1.2em;
+    color: $color-accent-dark;
+  }
+  .skill-description {
+    padding-left: 30px;
+    &:before {
+      display: inline-block;
+      width: 30px;
+      content: "\f005";
+      margin-left: -30px;
+    }
+  }
+}

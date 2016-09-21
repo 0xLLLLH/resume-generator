@@ -1,0 +1,178 @@
+{
+  "lang": "zh-CN",
+  "resumeTitle": "林立豪-个人简历",
+  "basicInfo": {
+    "name": "林立豪",
+    "title":"前端工程师",
+    "email": "linlihao159@gmail.com",
+    "github": "https://github.com/0xLLLLH",
+    "wechat": "0xLLLLH",
+    "qrcode": "http://115.28.240.133:8080/static/wechat-qrcode.png",
+    "weibo": "",
+    "blog": "http://blog.csdn.net/lincifer"
+  },
+  "education" : [
+    {
+      "time": "2013~至今",
+      "school": "浙江农林大学",
+      "major": "计算机科学与技术",
+      "honors": [
+        "浙江省第十二届大学生程序设计竞赛三等奖",
+        "2016 年 3 月 PAT 甲级 100 分"
+      ]
+    }
+  ],
+  "language": {
+    "languageScore": [
+      {
+        "type": "CET-4",
+        "score": "545",
+        "max": "710"
+      },
+      {
+        "type": "CET-6",
+        "score": "482",
+        "max": "710"
+      }
+    ],
+    "descriptions": [
+      "能流畅阅读英文专业书籍、MDN、文档及其他资料",
+      "能够在Github、Stack Overflow 等社区用英文正常交流"
+    ]
+  },
+  "experience": [
+    {
+      "type":"project",
+      "subtype":"个人项目",
+      "name": "Resume Generator",
+      "link":"https://github.com/0xLLLLH/resume-generator",
+      "demo":"https://github.com/0xLLLLH/resume-generator",
+      "descriptions":[
+        "在线简历生成器，设计参考<a href='http://joyeecheung.github.io/resume/'>这份简历</a>",
+        "从JSON读取数据，使用<strong>Vue.js</strong>生成页面，<strong>SCSS</strong>生成<strong>响应式</strong>样式"
+      ]
+    },
+    {
+      "type":"project",
+      "subtype":"个人项目",
+      "name": "Vue Flappy Bird",
+      "link":"https://github.com/0xLLLLH/vue-flappy-bird",
+      "descriptions":[
+        "一个小游戏，由<strong>Vue.js</strong>组件构成，使用<strong>Webpack</strong>加载资源，使用<strong>normalize.css</strong>统一不同浏览器下的表现",
+        "代码中使用了部分<strong>ECMAScript 6</strong>特性，用<strong>Babel</strong>生成ES 5代码，同时使用<strong>ESLint</strong>规范代码格式",
+        "<strong>事件驱动</strong>，game.js管理整个游戏，其中使用<strong>EventEmitter</strong>实现全局消息，所有组件根据消息修改状态，从而更新视图",
+        "全局配置项存放于config.js中，方便修改设置,组件内部也可覆盖"
+      ]
+    },
+    {
+      "type":"project",
+      "subtype":"个人项目",
+      "name": "Takeaway Android",
+      "link":"https://github.com/0xLLLLH/Takeaway_android",
+      "descriptions":[
+        "仿美团外卖的Android APP，使用Takeaway的数据数据库",
+        "实现了用户注册,登陆,店铺列表查看,详情及菜品查看,点菜(购物车)下单,订单浏览及操作等功能",
+        "使用了一些自定义工具类和自定义控件来对界面和功能进行统一处理",
+        "项目中使用 LoadMoreRecyclerView 和 StickyListHeaders 等开源项目"
+      ]
+    },
+    {
+      "type":"project",
+      "subtype":"个人项目",
+      "name": "Takeaway",
+      "link":"https://github.com/0xLLLLH/Takeaway",
+      "descriptions":[
+        "仿美团外卖的外卖网站，实现了完整的用户流程和商家流程",
+        "前端基于<strong>Bootstrap</strong>，使用<strong>jQuery</strong>操作DOM，全站使用<strong>Ajax</strong>加载页面内容"
+      ]
+    }
+  ],
+  "skills":[
+    {
+      "type":"language",
+      "typeName":"编程语言",
+      "detail": [
+        {
+          "name": "C/C++",
+          "descriptions":[
+            "熟悉<strong>OOP</strong>，熟悉STL的使用并对其实现有一定了解",
+            "能使用MFC进行Win32应用的开发"
+          ]
+        },
+        {
+          "name": "ECMAScript（JavaScript）",
+          "descriptions":[
+            "熟悉 <strong>ECMAScript 5</strong>",
+            "了解 <strong>ECMAScript 6</strong> 与相关后处理工具（<strong>Babel</strong>）并能在项目中使用"
+          ]
+        },
+        {
+          "name": "Python",
+          "descriptions":[
+            "能使用Python实现各种自动化脚本及爬虫"
+          ]
+        }
+      ]
+    },
+    {
+      "type":"frontend",
+      "typeName":"Web前端",
+      "detail": [
+        {
+          "name": "HTML/CSS",
+          "descriptions":[
+            "能够编写语义化的 HTML，模块化的 CSS，实现较复杂的布局与动画",
+            "了解已标准化的 HTML5 / CSS3 新特性，实验项目中能尝试使用未广泛实现的新标准"
+          ]
+        },
+        {
+          "name": "前端工程实践",
+          "descriptions":[
+            "使用 <strong>Meteor</strong>/<strong>Vue</strong> 编写过简单的 CRUD SPA，了解前端 <strong>MV*</strong> 模型",
+            "熟悉 <strong>jQuery</strong> / <strong>Bootstrap</strong> 的使用、定制与扩展",
+            "在项目中使用过 <strong>RequireJS</strong> / <strong>Webpack</strong> 等模块化解决方案",
+            "在项目中使用过 <strong>Less</strong> / <strong>Sass</strong> 等预处理/后处理工具",
+            "了解基本的前端兼容性处理、性能优化知识与技巧，并能在项目中加以实践"
+          ]
+        }
+      ]
+    },
+    {
+      "type":"backend",
+      "typeName":"Web后端",
+      "detail": [
+        {
+          "name": "Node.js",
+          "descriptions":[
+            "能够使用 <strong>Node.js API</strong> / <strong>Express</strong> 搭建简单的后端程序与数据库交互、渲染模板及提供 <strong>RESTful API</strong>",
+            "了解异步 I/O 及事件驱动的服务器模型，掌握常见的<strong>异步编程</strong>解决方案",
+            "能编写简单的 <strong>Express</strong> 中间件，使用 <strong>Mocha</strong> 与 <strong>Chai</strong> 编写单元测试"
+          ]
+        },
+        {
+          "name": "其他",
+          "descriptions":[
+            "使用 <strong>Laravel(PHP)</strong> / <strong>Django(Python)</strong> 搭建过简单的服务器",
+            "有使用 <strong>MongoDB</strong> / <strong>MySQL</strong> / <strong>SQLServer</strong> 数据库的经验"
+          ]
+        }
+      ]
+    },
+    {
+      "type":"miscellaneous",
+      "typeName":"其他",
+      "detail": [
+        {
+          "name": "",
+          "descriptions":[
+            "三年 <strong>ACM</strong> 竞赛经验，掌握多种基本算法，对较复杂算法有一定理解，能快速学习掌握新的算法",
+            "三年 <strong>Linux</strong> 使用经验，熟悉常用命令与配置，能编写简单的 <strong>bash</strong> 脚本",
+            "熟悉常用的 <strong>Git</strong> 命令",
+            "能够使用 <strong>LaTeX</strong> 及 <strong>Markdown</strong> 编写得体的中英文文档或论文，具备良好的技术交流能力",
+            "日常使用 <strong>WebStorm</strong> 和 <strong>Sublime Text 3</strong> 进行开发，也乐于尝试新工具"
+          ]
+        }
+      ]
+    }
+  ]
+}
