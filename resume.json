@@ -58,6 +58,7 @@
       "subtype":"个人项目",
       "name": "Vue Flappy Bird",
       "link":"https://github.com/0xLLLLH/vue-flappy-bird",
+      "demo":"http://115.28.240.133:3000/flappybird/",
       "descriptions":[
         "一个小游戏，由 <strong>Vue.js</strong> 组件构成，使用 <strong>Webpack</strong> 加载资源，使用 <strong>normalize.css</strong> 统一不同浏览器下的表现",
         "代码中使用了部分 <strong>ECMAScript 6</strong> 特性，用 <strong>Babel</strong> 生成ES 5代码，同时使用 <strong>ESLint</strong> 规范代码格式",
@@ -153,7 +154,7 @@
         {
           "name": "其他",
           "descriptions":[
-            "使用 <strong>Laravel(PHP)</strong> / <strong>Django(Python)</strong> 搭建过简单的服务器",
+            "使用 <strong>Laravel(PHP)</strong> / <strong>Django(Python)</strong> 搭建过简单的后端程序",
             "有使用 <strong>MongoDB</strong> / <strong>MySQL</strong> / <strong>SQLServer</strong> 数据库的经验"
           ]
         }
