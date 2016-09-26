@@ -1,8 +1,10 @@
 # Resume Generator
 
-> A Vue.js project that generate an online resume.Inspired by [this repo](https://github.com/joyeecheung/resume)
+Read data from `resume.json` then render them with Vue.js, and resources are managed by Webpack.
 
-Written with Webpack, SCSS, and Vue.
+This repository is inspired by [this repo](https://github.com/joyeecheung/resume).
+
+Written with Vue, SCSS, and Webpack.
 
 [Demo](http://115.28.240.133:3000/resume/)
 
