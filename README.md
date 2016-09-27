@@ -2,7 +2,7 @@
 
 Read data from `resume.json` then render them with Vue.js, and resources are managed by Webpack.
 
-This repository is inspired by [this repo](https://github.com/joyeecheung/resume).
+This repository is inspired by [Joyee Cheung's resume generator](https://github.com/joyeecheung/resume).
 
 Written with Vue, SCSS, and Webpack.
 
